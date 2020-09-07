@@ -1,4 +1,3 @@
-
 Vue.config.devtools = true
 
 var eventBus = new Vue() //global ebent
@@ -255,8 +254,26 @@ Vue.component('product-tabs', {
 				<div v-else>
 					<div class="review-box" v-for="(review,index) in reviews"
 						:key="index">
-						<pre>{{ review.name }}     Rating: {{ review.rating }}</pre>
-						<p>{{ review.review }}</p>
+						<div class="container">
+							<div class="row">
+								<div class="col">
+									<h4>{{ review.name }}</h4> 
+								</div>
+								<div class="col">
+									<div v-if="review.rating == 1">&#9733;&#9734;&#9734;&#9734;&#9734;</div>
+									<div v-else-if="review.rating == 2">&#9733;&#9733;&#9734;&#9734;&#9734;</div>
+									<div v-else-if="review.rating == 3">&#9733;&#9733;&#9733;&#9734;&#9734;</div>
+									<div v-else-if="review.rating == 4">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
+									<div v-else>&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col">
+									<p>{{ review.review }}</p>
+								</div>
+							</div>
+						</div>
+						
 					</div>
 				</div>
 			</div>
