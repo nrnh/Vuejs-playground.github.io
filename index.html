@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Product App</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="css/magnific-popup.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+</head>
+<body>
+
+	<div id="app" class="app">
+		<div @click=""></div>
+		<div class="top-cart">
+			<div class="cart">
+				<p class="left">Cart({{ cart.length }})</p>
+				<p class="right">Cart({{ cart.length }})</p>
+			</div>
+		</div>	
+		
+		<div class="grid-layout" >
+			<div class="animate-box1"></div>
+			<div class="animate-box2"></div>
+			<div class="animate-box3"></div>
+
+			<product :premium="premium" @add-to-cart="updateCart" @remove-from-cart="removeCart"></product>		
+			<div class="img1 wow fadeInDown" data-wow-delay="0.4s"></div>
+		</div>
+
+		<div class="container">
+			<div class="row">
+				<div class="review-section col align-self-center">
+					<product-tabs :reviews="reviews"></product-tabs>
+				</div>
+			</div>
+		</div>
+
+		<div class="bottom-cart">
+			<div class="cart">
+				<p class="left">Cart({{ cart.length }})</p>
+				<p class="right">Cart({{ cart.length }})</p>
+			</div>
+		</div>
+
+	</div>
+
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/magnific-popup-options.js"></script>
+	<script src="js/wow.min.js"></script>
+	<script type="text/javascript" src="js/script.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	<script>
+        new WOW().init();
+    </script>
+
+</body>
+</html>
