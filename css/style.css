@@ -135,13 +135,6 @@ button {
 	margin: 5px;
 }
 
-.review-box pre {
-	color: white;
-	font-size: 20px;
-	font-family: Yu Gothic;
-	font-weight: bold;
-}
-
 .disabledButton { border-color: black; }
 
 .lineThrough { text-decoration: line-through; }
